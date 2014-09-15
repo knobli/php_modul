@@ -1,0 +1,99 @@
+body {
+	background: #F0F0F0;
+	font-family: Tahoma, Geneva, sans-serif;
+	width: 80%;
+	min-width: 600px;
+	margin: 0 auto;
+}
+header {
+	height: 50px;
+	background: #FFFF00;
+	border: 1px solid #CCC;
+	width: 960px;
+	margin: 0px auto;
+}
+nav {
+	float: right;
+	display: inline;
+	margin-right: 10px;
+	width: 550px;
+	height: 35px;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	background-color: #8AD9FF;
+	border-radius: 8px;
+}
+
+nav ul {
+	height: auto;
+	padding: 8px 0px;
+	margin: 0px;
+}
+
+nav li {
+	display: inline;
+	padding: 20px;
+}
+
+nav a {
+	text-decoration: none;
+	color: #00F;
+	padding: 8px 8px 8px 8px;
+}
+
+nav a:hover {
+	color: #F90;
+	background-color: #FFF;
+}
+
+aside {
+	width: 300px;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	background: #00FFFF;
+}
+footer {
+	height: 50px;
+	background: #00FF00;
+}
+
+article {
+	padding: 10px;
+}
+#content {
+	position: relative;
+	margin-top: 50px;
+}
+#left {
+	margin-right: 300px;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Open Sans", Arial, sans-serif;
+	color: #444444;
+}
+
+h1 {
+	font-size: 2.6em;
+}
+
+h2 {
+	font-size: 2.2em;
+}
+
+h3 {
+	font-size: 1.8em;
+}
+
+h4 {
+	font-size: 1.4em;
+}
+
+h5 {
+	font-size: 1em;
+}
+
+h6 {
+	font-size: .8em;
+}
