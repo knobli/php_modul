@@ -65,7 +65,7 @@ define("PUBLIC_KEY", "6LeVbvsSAAAAALdj3JYARThMfdMXeSpB0q5nEMdf");
     </p>
 
     <p class="date">
-        <input type="datetime" name="date" id="date" placeholder="www.example.com" required/>
+        <input type="datetime" name="date" id="date" placeholder="Please specify a date and time" required/>
         <label for="date">Datum</label>
     </p>
 
