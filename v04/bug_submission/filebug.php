@@ -15,7 +15,7 @@ $response = recaptcha_check_answer(PRIVATE_KEY,
     $_POST["recaptcha_response_field"]);
 
 if (!$response->is_valid) {
-    //die ("Das reCAPTCHA wurde nicht korrekt eingegeben. Geh zurück und versuch es erneut. (reCAPTCHA: " . $resp->error . ")");
+    die ("Das reCAPTCHA wurde nicht korrekt eingegeben. Geh zurück und versuch es erneut. (reCAPTCHA: " . $resp->error . ")");
 }
 
 if (!isset($_POST['name'], $_POST['password'], $_POST['email'], $_POST['web'], $_POST['date'], $_POST['prio'], $_POST['bugtype'], $_POST['text'], $_POST['reproducible'], $_FILES['picture'])) {
