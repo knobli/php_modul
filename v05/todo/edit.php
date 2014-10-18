@@ -12,7 +12,7 @@
 	
 ?>
 	<h2>Update Todo Entry</h2>
-	<form role="form" action="main.php?page=create_entry" method="post">
+	<form role="form" action="main.php?page=edit_entry" method="post">
 	<div class="form-group">
 		<label for="title">Title</label>
 		<input type="text" class="form-control" id="title" name="title" placeholder="Title" value="<?=$todo->getTitle()?>">
@@ -35,6 +35,7 @@
             </span>
         </div>
 	</div>
+	<input type="hidden" name="todoId" value="<?=$todo->getId()?>" />
 	<input type="submit" value="Save" class="btn btn-default" />		
 </form>
 <script type="text/javascript">

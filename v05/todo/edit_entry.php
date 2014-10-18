@@ -1,27 +1,28 @@
-<?php if(Helper::checkLogin(true)){
+<?php
+if(Helper::checkLogin(true)){
 	
-	if (!isset($_POST['blogFile'], $_POST['title'], $_POST['content'])) {
+	if (!isset($_POST['todoId'], $_POST['title'], $_POST['priority'], $_POST['deadline'])) {
 	    die("INVALID_FORM");
 	}
 	
-	if (($blogFile = trim($_POST['blogFile'])) === '' OR
+	if (($todoId = trim($_POST['todoId'])) === '' OR
 		($title = trim($_POST['title'])) === '' OR
-	    ($content = trim($_POST['content'])) === '') {
+	    ($priority = trim($_POST['priority'])) === '' OR
+		($deadline = trim($_POST['deadline'])) === '') {
 	    die("EMPTY_FORM");
 	}
-		
-	$blogFile = htmlspecialchars($blogFile);
-
-	$filecontent = file(BlogEntry::UPLOAD_DIR . $blogFile);
-	$blogEntry = BlogEntry::createFromArray($filecontent);
 	
-	//only update content and title as described in the exercise
-	$blogEntry->setTitle(htmlspecialchars($title));
-	$blogEntry->setContent(htmlspecialchars($content));
-
-	file_put_contents(BlogEntry::UPLOAD_DIR . $blogFile, $blogEntry->getOutputForSaving());
-
-	header('Location: main.php?page=overview');
+	$todo = TodoEntryRepository::loadByID($todoId);
 	
+	$todo->setTitle(htmlspecialchars($title));
+	$todo->setPriority($priority);
+	$todo->setDeadline(new DateTime($deadline));
+	$todo->setCreator(Helper::getCurrentUserId());
+	
+	if(TodoEntryRepository::save($todo)){
+		header('Location: main.php?page=overview');
+	} else {
+		echo "Could not update Todo";
+	}
 }
 ?>
