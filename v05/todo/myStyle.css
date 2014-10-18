@@ -1,0 +1,15 @@
+.low {
+	background: #98FB98;
+}
+
+.medium{
+	background: #006400;
+}
+
+.high {
+	background: #7FFF00;
+}
+
+.deadline {
+	background: red !important;
+}
