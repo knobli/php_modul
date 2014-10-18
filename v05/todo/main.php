@@ -57,13 +57,13 @@ $page=$pageName.".php";
 			<li><a href="main.php?page=overview"><span class="glyphicon glyphicon-th-list"></span> Overview</a></li>
 			<li><a href="main.php?page=history"><span class="glyphicon glyphicon-time"></span> History</a></li>
 		  </ul>
-		</div>
 		<?php if(Helper::checkLogin(false)){ ?>			
 			<form class="navbar-right navbar-form" action="main.php?page=login" method="post">
 				Logged in as: <b><?=Helper::getUsername()?></b>
 				<input type="submit" name="logout" value="Logout">
 			</form>
 		<?php } ?>
+		</div>
 	</nav>
 	<div class="container">
 		<?php include "$page"; ?>
