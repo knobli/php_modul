@@ -52,7 +52,7 @@ include( 'class/postTable.class.php');
 	echo 'content: '.$post3->getContent().'<br/>';
 	echo 'created: '.$post3->getCreated().'<br/>';
 	
-	echo "<b>Find Post3 with id:</b><br>";
+	echo "<br><b>Find Post3 with id:</b><br>";
 	$post3 = new Post();
 	$post3->findByID(3);
 	
@@ -61,7 +61,7 @@ include( 'class/postTable.class.php');
 	echo 'content: '.$post3->getContent().'<br/>';
 	echo 'created: '.$post3->getCreated().'<br/>';
 	
-	echo "<b>Update found Post3:</b><br>";
+	echo "<br><b>Update found Post3:</b><br>";
 	$post3->update(array('content' => 'content updated (find by id)'));
 	
 	echo 'id: '.$post3->getID().'<br/>';
@@ -125,6 +125,8 @@ include( 'class/postTable.class.php');
 	
 	echo "<b>Find Posts by id (4):</b><br>";
 	$postsById = $table->findPostBy('id',4);
+	
+	echo "<br>Result:<br>";
 	foreach($postsById as $post){
 		echo "id:".$post->getID().'<br/>';	
 		echo "title:".$post->getTitle().'<br/>';
@@ -140,8 +142,10 @@ include( 'class/postTable.class.php');
 	echo 'created: '.$tablePost3->getCreated().'<br/>';
 	
 	
-	echo "<b>Find Posts by title (test2):</b><br>";
+	echo "<br><b>Find Posts by title (test2):</b><br>";
 	$postsByTitle = $table->findPostBy('title','test2');
+	
+	echo "<br>Result:<br>";
 	foreach($postsByTitle as $post){
 		echo "id:".$post->getID().'<br/>';
 		echo "title:".$post->getTitle().'<br/>';

@@ -61,6 +61,7 @@ class Post {
 	
 			$sql = 'INSERT INTO '.$this->model.' ('.$keys_t.')
 			VALUES (:'.$vals_t.');';
+			echo 'Sql statment: ' . $sql.'<br/>';
 			$stmt = $db->prepare($sql);
 			
 		} else {
@@ -69,10 +70,14 @@ class Post {
 				$variables[] = $key . ' = :'.$key;
 			}
 			$sql = 'UPDATE '.$this->model.' SET '.implode(',',$variables).' WHERE id=:id;';
+			echo 'Sql statment: ' . $sql.'<br/>';
 			$stmt = $db->prepare($sql);
 			$executeVals['id'] = $this->id;
 			
 		}
+		echo 'Execute values:<br/>';
+		print_r($executeVals);
+		echo '<br/>';
 		$stmt->execute( $executeVals );
 		
 		if( $id === false ){
@@ -83,9 +88,17 @@ class Post {
 	
 	public function delete(){
 		global $db;
-		$sql = 'DELETE FROM '.$this->model.' WHERE id= :id';
-		$stmt = $db->prepare($sql);
+		
 		$executeVals = array( 'id' =>  $this->id );
+		
+		$sql = 'DELETE FROM '.$this->model.' WHERE id= :id';
+		
+		echo 'Sql statment: ' . $sql.'<br/>';
+		echo "Excecute values: <br/>";
+		print_r($executeVals);
+		echo '<br/>';		
+		
+		$stmt = $db->prepare($sql);
 		$stmt->execute( $executeVals );		
 		
 		foreach( $this->attrs as $key => $attr ){
@@ -98,8 +111,14 @@ class Post {
 	public function findByID( $id ){
 		global $db;
 		$executeVals = array( 'id' =>  $id ) ;
-		$t = 'SELECT * FROM '.$this->model.' WHERE id= :id';
-		$stmt = $db->prepare($t);
+		$sql = 'SELECT * FROM '.$this->model.' WHERE id= :id';
+		
+		echo 'Sql statment: ' . $sql.'<br/>';
+		echo "Excecute values: <br/>";
+		print_r($executeVals);
+		echo '<br/>';
+		
+		$stmt = $db->prepare($sql);
 		$stmt->execute( $executeVals );
 		$data = $stmt->fetchAll(PDO::FETCH_ASSOC);
 		
@@ -131,6 +150,12 @@ class Post {
 		$attr_sql = SQLite3::escapeString($attr);
 		$executeVals = array(  'id' =>  $this->id ) ;
 		$sql = 'SELECT '.$attr_sql.' FROM '.$this->model.' WHERE id= :id';
+		
+		echo 'Sql statment: ' . $sql.'<br/>';
+		echo "Excecute values: <br/>";
+		print_r($executeVals);
+		echo '<br/>';		
+		
 		$stmt = $db->prepare($sql);
 		$stmt->execute( $executeVals );
 

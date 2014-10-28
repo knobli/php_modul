@@ -53,6 +53,10 @@ class PostTable {
 			}
 			
 			$sql = 'SELECT * FROM '.$this->model.' WHERE '.$where;
+			echo 'Sql statment: ' . $sql.'<br/>';
+			echo "Excecute values: <br/>";
+			print_r($executeVals);
+			echo '<br/>';
 			$stmt = $db->prepare($sql);
 			$stmt->execute( $executeVals );
 			$data = $stmt->fetchAll(PDO::FETCH_ASSOC);
