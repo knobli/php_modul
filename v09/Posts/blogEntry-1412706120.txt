@@ -1,0 +1,4 @@
+username: testUser
+title: Test Entry 2
+content: Hallo my friend\n\n\nHallo my friend\n\n\n\nHallo my friend\n\nThis is a new line test, it should work
+date: 1412706120
