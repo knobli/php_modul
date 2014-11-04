@@ -3,8 +3,8 @@ require_once 'CommandResolver.php';
 class FileSystemCommandResolver implements CommandResolver {
 
 	public function getCommand(Request $request) {
-		if ($request -> issetParameter("command")) {
-			switch( $request->getParameter("command") ) {
+		if ($request -> issetParameter("page")) {
+			switch( $request->getParameter("page") ) {
 				case 'create' :
 					return new BlogEntryCreate();
 				case 'delete' :

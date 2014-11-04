@@ -15,9 +15,6 @@ class BlogEntryList implements Command {
 		
 		$view->render($request, $response);
 		
-		//TODO list
-
-		
 	}
 	
 }
