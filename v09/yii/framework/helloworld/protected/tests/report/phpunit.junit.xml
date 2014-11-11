@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="unit/" tests="2" assertions="3" failures="0" errors="0" time="0.013000">
+    <testsuite name="DbTest" file="C:\TV\xampp\htdocs\php_modul\v09\yii\framework\helloworld\protected\tests\unit\DbTest.php" tests="1" assertions="2" failures="0" errors="0" time="0.007000">
+      <testcase name="testConnection" class="DbTest" file="C:\TV\xampp\htdocs\php_modul\v09\yii\framework\helloworld\protected\tests\unit\DbTest.php" line="3" assertions="2" time="0.007000"/>
+    </testsuite>
+    <testsuite name="MessageControllerTest" file="C:\TV\xampp\htdocs\php_modul\v09\yii\framework\helloworld\protected\tests\unit\MessageControllerTest.php" tests="1" assertions="1" failures="0" errors="0" time="0.006000">
+      <testcase name="testActionHelloworld" class="MessageControllerTest" file="C:\TV\xampp\htdocs\php_modul\v09\yii\framework\helloworld\protected\tests\unit\MessageControllerTest.php" line="3" assertions="1" time="0.006000"/>
+    </testsuite>
+  </testsuite>
+</testsuites>

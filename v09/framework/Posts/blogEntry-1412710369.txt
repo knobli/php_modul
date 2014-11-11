@@ -1,0 +1,4 @@
+username: testUser
+title: Test special chars
+content: Hallo das ist ein html special char &lt;br&gt; test
+date: 1412710369

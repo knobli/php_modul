@@ -1,0 +1,22 @@
+2014/11/10 15:29:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in C:\TV\xampp\htdocs\php_modul\v09\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\TV\xampp\htdocs\php_modul\v09\yii\framework\web\CController.php(270): CController->missingAction('')
+#1 C:\TV\xampp\htdocs\php_modul\v09\yii\framework\web\CWebApplication.php(282): CController->run('')
+#2 C:\TV\xampp\htdocs\php_modul\v09\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('message')
+#3 C:\TV\xampp\htdocs\php_modul\v09\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\TV\xampp\htdocs\php_modul\v09\yii\framework\helloworld\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/php_modul/v09/yii/framework/helloworld/index.php?r=message
+HTTP_REFERER=http://localhost/php_modul/v09/yii/framework/helloworld/index.php?r=gii/controller
+---
+2014/11/10 15:31:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in C:\TV\xampp\htdocs\php_modul\v09\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\TV\xampp\htdocs\php_modul\v09\yii\framework\web\CController.php(270): CController->missingAction('')
+#1 C:\TV\xampp\htdocs\php_modul\v09\yii\framework\web\CWebApplication.php(282): CController->run('')
+#2 C:\TV\xampp\htdocs\php_modul\v09\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('message')
+#3 C:\TV\xampp\htdocs\php_modul\v09\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\TV\xampp\htdocs\php_modul\v09\yii\framework\helloworld\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/php_modul/v09/yii/framework/helloworld/index.php?r=message
+HTTP_REFERER=http://localhost/php_modul/v09/yii/framework/helloworld/index.php?r=gii/controller
+---
